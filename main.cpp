@@ -1,8 +1,13 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QDebug>
+
+void say(QString text);
 
 int main(int argc, char *argv[])
 {
+    say("Hello from Qt Application!");
+
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
@@ -15,4 +20,9 @@ int main(int argc, char *argv[])
     engine.loadFromModule("Cobalt", "Main");
 
     return app.exec();
+}
+
+void say(QString text)
+{
+    qInfo() << text;
 }

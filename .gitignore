@@ -80,3 +80,9 @@ CMakeLists.txt.user*
 .rcc/
 .uic/
 /build*/
+
+# User directories
+.vscode/
+
+# User files
+compile_commands.json
